@@ -1,34 +1,30 @@
 /**
  * 
  * @desc 写入cookies
- * @param {any} name 
- * @param {any} value 
- * @param {any} day 
+ * @param {String} name 
+ * @param {String} value 
+ * @param {Number} days
  */
-function setCookie(name, value, day) {
-  //设置cookie
-  var day = typeof day == "undefined" || !day ? 1 : day; //时间,默认存储1天
-  var d = new Date();
-  d.setHours(d.getHours() + 24 * day);
-  document.cookie =
-    name + "=" + encodeURI(value) + ";expires=" + d.toUTCString();
+function setCookie(name, value, days) {
+  var date = new Date();
+  date.setDate(date.getDate() + days);
+  document.cookie = name + "=" + value + ";expires=" + date;
 }
 /**
  * 
  * @desc 读取cookies
- * @param {any} name 
+ * @param {String} name 
  * @returns 
  */
 function getCookie(name) {
-  //取cookie
-  var results = document.cookie.match(
-    new RegExp("(^| )" + name + "=([^;]*)(;|$)")
-  );
-  if (results) {
-    return decodeURI(results[2]);
-  } else {
-    return null;
+  var arr = document.cookie.replace(/\s/g, "").split(";");
+  for (var i = 0; i < arr.length; i++) {
+    var tempArr = arr[i].split("=");
+    if (tempArr[0] == name) {
+      return decodeURIComponent(tempArr[1]);
+    }
   }
+  return "";
 }
 /**
  * @desc 删除cookies
