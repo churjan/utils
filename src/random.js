@@ -18,3 +18,11 @@ function randomColor() {
     "#" + ("00000" + ((Math.random() * 0x1000000) << 0).toString(16)).slice(-6)
   );
 }
+//第二种写法
+function randomColor() {
+  var color = "#"
+  for (let i = 0; i < 6; i++) {
+    color += Math.floor(Math.random() * 16).toString(16)
+  }
+  return color;
+}

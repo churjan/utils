@@ -6,6 +6,7 @@
  */
 function getUrlQuery(str) {
      str = str == null ? window.location.href : str;
+     console.log(str);
     const arr = str.slice(str.lastIndexOf("?") + 1).split("&");
     let obj = {};
     for (let i = 0; i < arr.length; i++) {
