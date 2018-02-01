@@ -1,7 +1,7 @@
 /**
  * 
  * @desc 将一维数组变成二维数组
- * @param {array} arr 
+ * @param {A} arr 
  * @param {number} [len=2] 每组数组的长度
  * @returns 返回一个二维数组
  */
@@ -17,4 +17,13 @@ function oneArrToTwoArr(arr, len = 2) {
     twoArr[arrIdx][i % len] = el;
   });
   return twoArr;
+}
+/**
+ * 
+ * @desc 数组去重
+ * @param {Array} arr 
+ * @returns 
+ */
+function removeRepeatArray(arr) {
+  return Array.from(new Set(arr))
 }
