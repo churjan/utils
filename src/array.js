@@ -33,8 +33,18 @@ function removeRepeatArray(arr) {
  * @param {Array} arr
  * @param {number} value
  * @returns {number} 返回值出现的次数
- * @example countOccurrences([1,1,1,2,3,4,5],1) // 3
+ * @example countOccurrences([1,1,1,2,3,4,5],1) -> 3
  */
 function countOccurrences (arr,value) {
   return arr.reduce((sum,v)=>v===value?sum+1:sum+0,0);
+}
+
+/**
+ * @desc 使用reduce（）来获取数组中的所有元素，并使用concat（）来使它们flatten
+ * @param {Array} arr 
+ * @returns 
+ * @example flatten([1,[2],3,4]) -> [1,2,3,4]
+ */
+function flatten(arr) {
+  return arr.reduce((sum, v) => sum.concat(v), []);
 }
