@@ -1,5 +1,4 @@
 /**
- * 
  * @desc 判断是否iPhoneX
  * @returns Boolean
  */
@@ -9,8 +8,8 @@ function isIphoneX() {
     (screen.height == 812 && screen.width == 375)
   );
 }
+
 /**
- * 
  * @desc 判断移动设备
  * @returns
  */
@@ -28,3 +27,20 @@ function getOS() {
     return "otherOS";
   }
 }
+
+/**
+ * @desc 轻松监听任何App自带返回键
+ */
+var hiddenProperty = 'hidden' in document ? 'hidden' :    
+    'webkitHidden' in document ? 'webkitHidden' :    
+    'mozHidden' in document ? 'mozHidden' :    
+    null;
+var visibilityChangeEvent = hiddenProperty.replace(/hidden/i, 'visibilitychange');
+var onVisibilityChange = function(){
+    if (!document[hiddenProperty]) {    
+        console.log('页面非激活');
+    }else{
+        console.log('页面激活')
+    }
+}
+document.addEventListener(visibilityChangeEvent, onVisibilityChange);

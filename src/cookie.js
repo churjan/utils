@@ -24,7 +24,6 @@ function getCookie(name) {
       return decodeURIComponent(tempArr[1]);
     }
   }
-  return "";
 }
 /**
  * @desc 删除cookies
@@ -40,8 +39,9 @@ function clearCookie(name) {
  * @returns Boolean
  */
 function checkCookie(name) {
-  var resultes = this.getCookie(name);
-  if (resultes != "" && resultes != null) {
+  var result = this.getCookie(name);
+  console.log(result,123);
+  if (result !== undefined) {
     return true;
   } else {
     return false;
