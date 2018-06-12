@@ -26,10 +26,10 @@ function debounce(fn, wait) {
 function throttle(fn, wait) {
   var prev = Date.now();
   return function() {
-      let now = Date.now();
-      if (now - prev >= wait) {
-        fn();
-          prev = Date.now();
-      }
-  }
+    let now = Date.now();
+    if (now - prev >= wait) {
+      fn();
+      prev = Date.now();
+    }
+  };
 }
