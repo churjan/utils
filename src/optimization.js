@@ -26,11 +26,9 @@ function debounce(fn, wait) {
 function throttle(fn, wait) {
   var prev = Date.now();
   return function() {
-      let context = this;
-      let args = arguments;
       let now = Date.now();
       if (now - prev >= wait) {
-        fn.apply(context, args);
+        fn();
           prev = Date.now();
       }
   }
