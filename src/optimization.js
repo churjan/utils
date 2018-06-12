@@ -23,14 +23,14 @@ function debounce(fn, wait) {
  * @param {number} wait //间隔时间
  *
  */
-function throttle(func, delay) {
+function throttle(fn, wait) {
   var prev = Date.now();
   return function() {
       let context = this;
       let args = arguments;
       let now = Date.now();
-      if (now - prev >= delay) {
-          func.apply(context, args);
+      if (now - prev >= wait) {
+        fn.apply(context, args);
           prev = Date.now();
       }
   }
