@@ -1,6 +1,6 @@
 /**
  * @desc 将一维数组变成二维数组
- * @param {Array} arr 
+ * @param {Array} arr
  * @param {number} [len=2] 每组数组的长度
  * @returns {Array} 返回一个二维数组
  */
@@ -20,8 +20,8 @@ function oneArrToTwoArr(arr, len = 2) {
 
 /**
  * @desc 数组去重
- * @param {Array} arr 
- * @returns 
+ * @param {Array} arr
+ * @returns
  */
 function removeRepeatArray(arr) {
   return Array.from(new Set(arr));
@@ -41,8 +41,8 @@ function countOccurrences (arr,value) {
 
 /**
  * @desc 使用reduce（）来获取数组中的所有元素，并使用concat（）来使它们flatten
- * @param {Array} arr 
- * @returns 
+ * @param {Array} arr
+ * @returns
  * @example flatten([1,[2],3,4]) -> [1,2,3,4]
  */
 function flatten(arr) {
