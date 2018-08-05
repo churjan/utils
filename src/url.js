@@ -1,7 +1,7 @@
 /**
  * 
  * @desc 获取地址的query字段，并将它转成对象
- * @param {String} str 
+ * @param {string} str 
  * @returns 
  */
 function getUrlQuery(str) {

@@ -1,9 +1,9 @@
 /**
  * 
  * @desc 写入cookies
- * @param {String} name 
- * @param {String} value 
- * @param {Number} days
+ * @param {string} name 
+ * @param {string} value 
+ * @param {number} days
  */
 function setCookie(name, value, days) {
   var date = new Date();
@@ -13,7 +13,7 @@ function setCookie(name, value, days) {
 /**
  * 
  * @desc 读取cookies
- * @param {String} name 
+ * @param {string} name 
  * @returns 
  */
 function getCookie(name) {
@@ -36,7 +36,7 @@ function clearCookie(name) {
 /**
  * @desc 检测cookie是否存在
  * @param {any} name 
- * @returns Boolean
+ * @returns boolean
  */
 function checkCookie(name) {
   var result = this.getCookie(name);

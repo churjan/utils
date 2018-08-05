@@ -1,7 +1,7 @@
 /**
  *
  * @desc 防抖
- * @param {Function} fn
+ * @param {function} fn
  * @param {number} wait //间隔时间
  *
  */
@@ -19,7 +19,7 @@ function debounce(fn, wait) {
 /**
  *
  * @desc 节流
- * @param {Function} fn
+ * @param {function} fn
  * @param {number} wait //间隔时间
  *
  */

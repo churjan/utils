@@ -1,6 +1,6 @@
 /**
  * @desc 判断是否iPhoneX
- * @returns Boolean
+ * @returns boolean
  */
 function isIphoneX() {
   return (
