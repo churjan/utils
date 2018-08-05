@@ -7,7 +7,7 @@ function timestampToTime(timestamp) {
   if(timestamp.length==10){
     let date = new Date(timestamp*1000); //时间戳为10位需*1000，时间戳为13位的话不需乘1000
   }else{
-    var date = new Date(timestamp);
+    let date = new Date(timestamp);
   }
 
   Y = date.getFullYear() + '-';

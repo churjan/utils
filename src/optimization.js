@@ -7,7 +7,7 @@
  */
 
 function debounce(fn, wait) {
-  var timeout = null;
+  let timeout = null;
   return function() {
     if (timeout !== null) {
       clearTimeout(timeout);
@@ -24,7 +24,7 @@ function debounce(fn, wait) {
  *
  */
 function throttle(fn, wait) {
-  var prev = Date.now();
+  let prev = Date.now();
   return function() {
     let now = Date.now();
     if (now - prev >= wait) {

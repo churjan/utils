@@ -18,7 +18,7 @@ function randomColor() {
 }
 //第二种写法
 function randomColor() {
-  var color = "#"
+  let color = "#"
   for (let i = 0; i < 6; i++) {
     color += Math.floor(Math.random() * 16).tostring(16)
   }

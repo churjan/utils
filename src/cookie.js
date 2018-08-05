@@ -6,7 +6,7 @@
  * @param {number} days
  */
 function setCookie(name, value, days) {
-  var date = new Date();
+  let date = new Date();
   date.setDate(date.getDate() + days);
   document.cookie = name + "=" + value + ";expires=" + date;
 }
@@ -17,9 +17,9 @@ function setCookie(name, value, days) {
  * @returns 
  */
 function getCookie(name) {
-  var arr = document.cookie.replace(/\s/g, "").split(";");
-  for (var i = 0; i < arr.length; i++) {
-    var tempArr = arr[i].split("=");
+  let arr = document.cookie.replace(/\s/g, "").split(";");
+  for (let i = 0; i < arr.length; i++) {
+    let tempArr = arr[i].split("=");
     if (tempArr[0] == name) {
       return decodeURIComponent(tempArr[1]);
     }
@@ -39,7 +39,7 @@ function clearCookie(name) {
  * @returns boolean
  */
 function checkCookie(name) {
-  var result = this.getCookie(name);
+  let result = this.getCookie(name);
   console.log(result,123);
   if (result !== undefined) {
     return true;
